@@ -4,10 +4,10 @@
     "description": "Webpack markup bootstrap",
     "main": "src/index.js",
     "scripts": {
-        "dev": "cross-env  NODE_ENV=development ./node_modules/.bin/webpack-dev-server --progress --watch --inline --mode development",
-        "prod": "cross-env  NODE_ENV=production ./node_modules/.bin/webpack-dev-server --progress --watch --inline --mode production",
-        "build": "scross-env et NODE_ENV=production del-cli public && webpack --mode production",
-        "clean": "del-cli public"
+        "dev": "cross-env NODE_ENV=development webpack --mode development",
+        "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+        "server": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+        "prod": "cross-env NODE_ENV=production webpack --mode production && prettier --print-width=120"
     },
     "devDependencies": {
         "@babel/core": "^7.1.2",

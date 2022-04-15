@@ -100,9 +100,21 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: "./src/assets",
-                to: "./assets"
-            }
+                from: "./src/fonts",
+                to: "./fonts"
+            },
+            {
+                from: "./src/favicon",
+                to: "./favicon"
+            },
+            {
+                from: "./src/img",
+                to: "./img"
+            },
+            {
+                from: "./src/uploads",
+                to: "./uploads"
+            },
         ])
     ].concat(htmlPlugins)
 };
